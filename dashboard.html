@@ -1,0 +1,1679 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <title>SMPN 35 Jakarta</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+    <!-- boot -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+
+    <!-- lightslider -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/css/lightslider.css" integrity="sha512-+1GzNJIJQ0SwHimHEEDQ0jbyQuglxEdmQmKsu8KI7QkMPAnyDrL9TAnVyLPEttcTxlnLVzaQgxv2FpLCLtli0A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/js/lightslider.min.js" integrity="sha512-Gfrxsz93rxFuB7KSYlln3wFqBaXUc1jtt3dGCp+2jTb563qYvnUBM/GP2ZUtRC27STN/zUamFtVFAIsRFoT6/w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Viga&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap");
+*,
+*::before,
+*::after {
+  font-family: 'Poppins', sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  position: relative;
+}
+
+.navbar {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: transparent;
+}
+
+.navbar .hamburger span {
+  color: #c81c1c;
+}
+
+.navbar .navbar-brand {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar .navbar-brand img {
+  width: 45px;
+  height: 45px;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+
+.navbar .navbar-brand h1 {
+  font-size: 1.2rem;
+  margin-left: 10px;
+  font-family: 'Viga', sans-serif;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: #fff;
+}
+
+.navbar .navbar-collapse .navbar-nav .nav-item .nav-link {
+  font-size: 1.1rem;
+  margin-left: 20px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.navbar .form-inline .form-control {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.navbar .form-inline .btn {
+  width: 70px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.navbarKu {
+  background-color: #fff;
+  -webkit-box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.navbarKu .navbar-brand h1,
+.navbarKu .navbar-collapse .navbar-nav .nav-item .nav-link {
+  color: #000;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-item .dropdown-menu {
+  position: absolute;
+  left: 0;
+}
+
+.slideshow {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.slideshow img {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+.slideshow .satu {
+  background-image: url("img/gambar1.png");
+}
+
+.slideshow .dua {
+  background-image: url("img/gambar2.png");
+}
+
+.slideshow .tiga {
+  background-image: url("img/gambar3.png");
+}
+
+.slideshow .empat {
+  background-image: url("img/gambar3.png");
+}
+
+.slideshow .lima {
+  background-image: url("img/gambar3.png");
+}
+
+.slideshow .enam {
+  background-image: url("img/gambar3.png");
+}
+
+.slideshow .container {
+  position: absolute;
+  bottom: 150px;
+  left: 150px;
+}
+
+.slideshow .container .mainText {
+  position: relative;
+}
+
+.slideshow .container .mainText .garis {
+  position: absolute;
+  width: 7px;
+  height: 80px;
+  border-radius: 10px;
+  background-color: #FFA51C;
+}
+
+.slideshow .container .mainText h3 {
+  font-size: 1.5rem;
+  font-style: italic;
+  margin-left: 30px;
+  color: #fff;
+}
+
+.slideshow .container .mainText h1 {
+  margin: 20px 0 40px 30px;
+  font-weight: 1000;
+  line-height: 10px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.slideshow .container h3 {
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.title {
+  margin: 150px auto 30px auto;
+}
+
+.title h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 20px;
+}
+
+.title h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 25px;
+  text-align: center;
+}
+
+.title p {
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.perGaleri {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.perGaleri img {
+  width: 250px;
+  height: 150px;
+  margin: 5px;
+}
+
+.scroll {
+  background-color: #fff;
+  -webkit-box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.3);
+  -webkit-transition: background-color .5s;
+  transition: background-color .5s;
+}
+
+.scroll .navbar-brand h1,
+.scroll .navbar-collapse .navbar-nav .nav-item .nav-link {
+  color: #000;
+}
+
+.sambutan {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  padding: 30px 0;
+}
+
+.sambutan h1 {
+  font-size: 2.3rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.sambutan p {
+  font-style: italic;
+  font-size: 1rem;
+}
+
+.kepsek {
+  background-image: url("../images/bg-visimisi.png");
+  margin: 30px 0;
+}
+
+.kepsek .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.kepsek .container img {
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+  -webkit-box-shadow: 2px 2px 20px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 2px 2px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.kepsek .container .visiMisi {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.kepsek .container .visiMisi .visi {
+  margin: 0 50px 0 100px;
+}
+
+.kepsek .container .visiMisi .visi h5 {
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+.kepsek .container .visiMisi .visi h3 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+.kepsek .container .visiMisi .misi h5 {
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+.kepsek .container .visiMisi .misi p {
+  font-size: 1.2rem;
+  font-family: 'PT Serif', sans-serif;
+}
+
+.titleArtikel {
+  padding: 130px 0 20px 0;
+}
+
+.titleArtikel h1 {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  letter-spacing: 0px;
+  font-weight: 600;
+}
+
+.artikel .perArtikel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.artikel .perArtikel:hover h3 {
+  color: #0e85e7;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.artikel .perArtikel img {
+  width: 250px;
+  height: 150px;
+  margin-right: 20px;
+  border-radius: 10px;
+}
+
+.artikel .perArtikel h3 {
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: #000;
+  line-height: 30px;
+}
+
+.artikel .perArtikel p {
+  color: #000;
+}
+
+.iconBox {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  z-index: 9999999999999999999999999999999999999999999;
+}
+
+.iconBox .perIconBox {
+  width: 50px;
+  height: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #fff;
+}
+
+.perIconBox:hover {
+  color: #dadada;
+}
+
+.wa {
+  background-color: #1bc22e;
+}
+
+.fb {
+  background-color: #4867AA;
+}
+
+.ig {
+  background: -webkit-gradient(linear, right top, left bottom, from(#5056C5), color-stop(#EE4B51), to(#F7B04D));
+  background: linear-gradient(to bottom left, #5056C5, #EE4B51, #F7B04D);
+}
+
+.yt {
+  background-color: #FF0000;
+}
+
+.linkin {
+  background-color: #0077B5;
+}
+
+.jurusan {
+  background-color: #f3f1f1;
+  padding: 50px 0;
+  margin-top: 80px;
+}
+
+.jurusan h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.jurusan .boxJurusan {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.jurusan .boxJurusan .perBox {
+  position: relative;
+  margin: 10px;
+  width: 350px;
+  height: 200px;
+  overflow: hidden;
+}
+
+.jurusan .boxJurusan .perBox img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+}
+
+.jurusan .boxJurusan .perBox h3 {
+  position: absolute;
+  bottom: -10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  left: 0;
+  padding-left: 5px;
+  color: #fff;
+  width: 100%;
+  height: 35px;
+  background-color: #0066ff;
+  font-size: 1rem;
+  z-index: 2;
+}
+
+.jurusan .boxJurusan .perBox:hover img {
+  opacity: .6;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.containerArtikelHome {
+  padding-top: 50px;
+}
+
+.containerArtikelHome h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.containerArtikelHome .artikelHome {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.containerArtikelHome .artikelHome .perArtikelHome {
+  width: 350px;
+  margin: 10px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.containerArtikelHome .artikelHome .perArtikelHome:hover h3 {
+  color: #0e6ce7;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.containerArtikelHome .artikelHome .perArtikelHome img {
+  width: 100%;
+  height: 225px;
+  border-radius: 5%;
+  margin-bottom: 10px;
+}
+
+.containerArtikelHome .artikelHome .perArtikelHome h3 {
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: 900;
+  color: #000;
+}
+
+.containerArtikelHome .artikelHome .perArtikelHome small {
+  color: #000;
+}
+
+.containerArtikelHome .artikelHome .perArtikelHome small span {
+  color: #0e85e7;
+  font-weight: 700;
+}
+
+.containerArtikelHome .artikelHome .perArtikelHome p {
+  font-size: .9rem;
+  color: #000;
+}
+
+.footer {
+  background-color: #263238;
+  padding-top: 25px;
+  padding-bottom: 50px;
+  margin-top: 125px;
+}
+
+.footerContactUs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footerContactUs .perFooterContactUs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10px 0;
+}
+
+.footerContactUs .perFooterContactUs p {
+  margin: 0 0 0 20px;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+
+.footerAbout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.footerAbout a {
+  margin: 5px 0;
+}
+
+.btn-newsletter {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.footerCopyright {
+  width: 100%;
+  height: 60px;
+  background-color: #111111;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footerCopyright p {
+  margin: 0;
+}
+
+.ekstrakulikuler {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.ekstrakulikuler .perEkstrakulikuler {
+  width: 300px;
+  height: 200px;
+  position: relative;
+  margin: 20px 10px;
+  overflow: hidden;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 5px 10px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 10px 3px rgba(0, 0, 0, 0.2);
+}
+
+.ekstrakulikuler .perEkstrakulikuler p {
+  width: 100%;
+  height: 30px;
+  position: absolute;
+  bottom: -17px;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #0069D9;
+  color: #fff;
+  border-radius: 20px;
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
+}
+
+.ekstrakulikuler .perEkstrakulikuler::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-image: url("../images/4.jpeg");
+  background-size: cover;
+  background-position: top center;
+  width: 100%;
+  height: 100%;
+}
+
+.ekstrakulikuler .perEkstrakulikuler:hover::before {
+  opacity: .7;
+}
+
+.ekstrakulikuler .perEkstrakulikuler:hover p {
+  -webkit-transition: .5s;
+  transition: .5s;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.containerEkstra {
+  margin-top: 80px;
+  width: 100%;
+  height: 70vh;
+  background-image: url("../images/basket.jpg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.titleEkstrakulikuler {
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 50px 0;
+}
+
+.pembinaEkstrakulikuler {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pembinaEkstrakulikuler .perPembina {
+  width: 250px;
+  height: 200px;
+  margin: 20px 10px;
+  position: relative;
+}
+
+.pembinaEkstrakulikuler .perPembina img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+.pembinaEkstrakulikuler .perPembina h5 {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #0077B5;
+  margin: 0;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.fasilitas {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.detailArtikel {
+  margin: 140px 0 70px 0;
+}
+
+.detailArtikel h2 {
+  font-weight: 700;
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.imgArtikel {
+  width: 100%;
+  height: 700px;
+  margin-bottom: 50px;
+}
+
+.shareArtikel p,
+.penulis p {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.shareArtikel img,
+.penulis img {
+  width: 60%;
+  height: 200px;
+  border-radius: 10px;
+}
+
+.shareArtikel h4,
+.penulis h4 {
+  font-weight: 600;
+}
+
+.containerIconShare {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.containerIconShare .iconShare {
+  width: 50px;
+  height: 40px;
+  margin: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 4px;
+}
+
+.fixed {
+  position: fixed;
+  right: 100px;
+  top: 150px;
+}
+
+.mainDetailArtikel .row .col-md-8 h1,
+.mainDetailArtikel .row .col-md-8 h2,
+.mainDetailArtikel .row .col-md-8 h3,
+.mainDetailArtikel .row .col-md-8 h4,
+.mainDetailArtikel .row .col-md-8 h5,
+.mainDetailArtikel .row .col-md-8 h6 {
+  font-weight: 600;
+}
+
+.kontak {
+  margin: 150px 0 150px 0;
+}
+
+.kontak form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.kontak form .formKontakKiri {
+  width: 45%;
+}
+
+.kontak form .formKontakKanan {
+  width: 50%;
+}
+
+iframe {
+  width: 100%;
+  height: 500px;
+  margin: 0;
+  -webkit-transform: translateY(6px);
+          transform: translateY(6px);
+}
+
+.footerHubungiKami {
+  margin: 0;
+}
+
+@media (max-width: 1175px) {
+  .jurusan .boxJurusan .perBox {
+    width: 375px;
+    height: 225px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .shareArtikel img,
+  .penulis img {
+    width: 80%;
+  }
+  .detailArtikel h2 {
+    font-size: 2rem;
+  }
+  .kepsek .container img {
+    margin-right: 30px;
+  }
+  .kepsek .container .visiMisi {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: inherit;
+        -ms-flex-pack: inherit;
+            justify-content: inherit;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .kepsek .container .visiMisi .visi {
+    margin: 0 0 20px 0;
+  }
+  .kepsek .container .visiMisi .visi h3 {
+    font-weight: 600;
+  }
+  .kepsek .container .visiMisi .misi p {
+    font-size: 1rem;
+  }
+  .sambutan h1 {
+    font-size: 1.7rem;
+  }
+  .sambutan p {
+    font-size: .8rem;
+  }
+  .perGaleri img {
+    width: 200px;
+    height: 100px;
+  }
+  .title h2 {
+    font-size: 1.7rem;
+  }
+  .jurusan .boxJurusan .perBox {
+    width: 300px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 995px) {
+  .artikel .perArtikel h3 {
+    font-size: 1.5rem;
+  }
+  .artikel .perArtikel p {
+    font-size: .9rem;
+  }
+  .containerArtikelHome .artikelHome .perArtikelHome {
+    width: 300px;
+  }
+  .containerArtikelHome .artikelHome .perArtikelHome img {
+    height: 200px;
+  }
+  .containerEkstra {
+    height: 50vh;
+  }
+  .footerContactUs .perFooterContactUs p {
+    font-size: .7rem;
+  }
+}
+
+@media (max-width: 770px) {
+  .jurusan h2 {
+    font-size: 2rem;
+  }
+  .jurusan .boxJurusan .perBox {
+    width: 80%;
+    height: 250px;
+  }
+  .containerArtikelHome .artikelHome .perArtikelHome {
+    width: 100%;
+  }
+  .containerArtikelHome .artikelHome .perArtikelHome img {
+    height: 300px;
+  }
+  .artikel .perArtikel {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .artikel .perArtikel img {
+    width: 100%;
+    height: 250px;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  .artikel .perArtikel .textArtikel h3 {
+    font-size: 1.7rem;
+  }
+  .kepsek .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  .kepsek .container img {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  .sambutan h1 {
+    font-size: 1.5rem;
+  }
+  .pembinaEkstrakulikuler .perPembina {
+    width: 80%;
+    height: 300px;
+  }
+}
+
+@media (max-width: 767px) {
+  .footerContactUs .perFooterContactUs p {
+    font-size: 1rem;
+  }
+  .shareArtikel img,
+  .penulis img {
+    width: 50%;
+  }
+}
+
+@media (max-width: 650px) {
+  .slideshow .container {
+    left: 0;
+    bottom: 250px;
+  }
+  .imgArtikel {
+    height: 400px;
+  }
+  .detailArtikel h2 {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 475px) {
+  .perGaleri img {
+    width: 150px;
+    height: 100px;
+  }
+  .pembinaEkstrakulikuler .perPembina {
+    width: 100%;
+    height: 300px;
+  }
+  .containerArtikelHome h2 {
+    font-size: 1.5rem;
+  }
+  .containerArtikelHome .artikelHome .perArtikelHome {
+    width: 100%;
+  }
+  .containerArtikelHome .artikelHome .perArtikelHome img {
+    height: 250px;
+  }
+  .title h1 {
+    font-size: 1.7rem;
+  }
+  .title p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .shareArtikel img,
+  .penulis img {
+    width: 80%;
+    height: 250px;
+  }
+  .imgArtikel {
+    height: 200px;
+  }
+  .navbar .navbar-brand img {
+    width: 33px;
+    height: 33px;
+  }
+  .navbar .navbar-brand h1 {
+    font-size: 1rem;
+  }
+  .containerEkstra {
+    margin-top: 60px;
+  }
+  .slideshow .container .mainText .garis {
+    height: 70px;
+  }
+  .slideshow .container .mainText h3 {
+    font-size: 1.2rem;
+    margin-left: 20px;
+  }
+  .slideshow .container .mainText h1 {
+    margin: 20px 0 30px 20px;
+    font-size: 1.8rem;
+  }
+  .slideshow .container h3 {
+    font-size: .9rem;
+  }
+  .artikel .perArtikel img {
+    height: 200px;
+  }
+  .artikel .perArtikel .textArtikel h3 {
+    font-size: 1.5rem;
+  }
+  .artikel .perArtikel .textArtikel p {
+    font-size: .8rem;
+  }
+  .artikelPagination span {
+    padding: 5px 15px;
+    font-size: .9rem;
+    border: 1px solid #000;
+    margin: 0 5px;
+  }
+  .titleArtikel h1 {
+    text-align: center;
+  }
+  .artikel .perArtikel img {
+    height: 200px;
+  }
+  .artikel .perArtikel .textArtikel h3 {
+    font-size: 1.5rem;
+  }
+  .artikel .perArtikel .textArtikel p {
+    font-size: .8rem;
+  }
+  .artikelPagination span {
+    padding: 3px 10px;
+    font-size: .7rem;
+  }
+  .jurusan h2 {
+    font-size: 1.5rem;
+  }
+  .jurusan .boxJurusan .perBox {
+    width: 100%;
+  }
+  .jurusan .boxJurusan .perBox h3 {
+    font-size: .8rem;
+  }
+  .iconBox {
+    top: 100%;
+    -webkit-transform: translate(0, -100%);
+            transform: translate(0, -100%);
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .iconBox .perIconBox {
+    width: 300px;
+    border-bottom: 0px solid #0306aa;
+    border-right: 0px solid #666666;
+  }
+  .pembinaEkstrakulikuler .perPembina {
+    height: 200px;
+  }
+}
+
+@media (max-width: 375px) {
+  .sambutan h1 {
+    font-size: 1.2rem;
+  }
+  .sambutan p {
+    font-size: .7rem;
+  }
+  .kepsek .container img {
+    width: 200px;
+    height: 200px;
+  }
+  .kepsek .container .visiMisi .visi h5 {
+    font-size: .9rem;
+  }
+  .kepsek .container .visiMisi .visi h3 {
+    font-size: 1rem;
+  }
+  .kepsek .container .visiMisi .misi h5 {
+    font-size: .9rem;
+  }
+  .kepsek .container .visiMisi .misi p {
+    font-size: .9rem;
+  }
+  .perGaleri img {
+    width: 100%;
+    height: 200px;
+  }
+  .perFooterContactUs p {
+    font-size: .9em;
+  }
+}
+/*# sourceMappingURL=style.css.map */
+</style>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light  navbarHome fixed-top">
+        <div class="container">
+
+            <a class="navbar-brand" href="#">
+                <img src="img/logo1.png" alt="Logo SMPN 35 Jakarta Timur">
+                <h1>SMPN 35<br>Jakarta Timur</h1>
+            </a>
+
+            <button class="navbar-toggler hamburger" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="dashboard.html">Home</a>
+                    </li>
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="galeri.html">Galeri</a>
+                    </li>
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="artikel.html">Artikel</a>
+                    </li>
+
+                    <li class="nav-item active">
+                        <a href="#" class="nav-link dropdown-toggle" id="dropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            More
+                        </a>
+
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
+                            <a class="dropdown-item" href="ekstrakulikuler.html">Ekstrakulikuler</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="kontak.html">Contact Us</a>
+                        </div>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="formdaftar.php">Pendaftaran</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+
+                    <input class="form-control sm-2" type="search" placeholder="Cari Artikel" aria-label="Search">
+
+                    <button class="btn btn-primary sm-0" type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+
+                </form>
+            </div>
+
+        </div>
+    </nav>
+
+
+
+
+    <ul id="autoWidth" class="cs-hidden">
+        <li class="item-a">
+            <section class="slideshow">
+                <img class="satu" src="images/banner-shd.png" alt="Team Work">
+                <div class="shadow"></div>
+                <div class="container">
+                    <div class="mainText">
+                        <div class="garis"></div>
+                        <h3>SMPN</h3>
+                        <h1>35 Jakarta Timur</h1>
+                    </div>
+
+                  
+                </div>
+            </section>
+        </li>
+
+        <li class="item-a">
+            <section class="slideshow">
+                <img class="dua" src="images/banner-shd.png" alt="Team Work">
+                <div class="shadow"></div>
+                <div class="container">
+                    <div class="mainText">
+                        <div class="garis"></div>
+                        <h3>SMPN</h3>
+                        <h1>35 Jakarta Timur</h1>
+                    </div>
+
+                    
+                </div>
+            </section>
+        </li>
+
+        <li class="item-a">
+            <section class="slideshow">
+                <img class="tiga" src="images/banner-shd.png" alt="Team Work">
+                <div class="shadow"></div>
+                <div class="container">
+                    <div class="mainText">
+                        <div class="garis"></div>
+                        <h3>SMPN</h3>
+                        <h1>35 Jakarta Timur</h1>
+                    </div>
+
+                
+                </div>
+            </section>
+        </li>
+
+        <li class="item-a">
+            <section class="slideshow">
+                <img class="empat" src="images/banner-shd.png" alt="Team Work">
+                <div class="shadow"></div>
+                <div class="container">
+                    <div class="mainText">
+                        <div class="garis"></div>
+                        <h3>SMPN</h3>
+                        <h1>35 Jakarta Timur</h1>
+                    </div>
+
+                    
+                </div>
+            </section>
+        </li>
+
+        <li class="item-a">
+            <section class="slideshow">
+                <img class="lima" src="images/banner-shd.png" alt="Team Work">
+                <div class="shadow"></div>
+                <div class="container">
+                    <div class="mainText">
+                        <div class="garis"></div>
+                        <h3>SMPN</h3>
+                        <h1>35 Jakarta Timur</h1>
+                    </div>
+
+                 
+                </div>
+            </section>
+        </li>
+
+
+        <li class="item-a">
+            <section class="slideshow">
+                <img class="enam" src="images/banner-shd.png" alt="Team Work">
+                <div class="shadow"></div>
+                <div class="container">
+                    <div class="mainText">
+                        <div class="garis"></div>
+                        <h3>SMPN</h3>
+                        <h1>35 Jakarta Timur</h1>
+                    </div>
+
+               
+                </div>
+            </section>
+        </li>
+
+    </ul>
+
+
+
+
+
+
+
+    <div class="sambutan">
+        <h1>WELCOME TO SMP 35 Jakarta Timur</h1>
+        <p>
+            SMPN 35 Jakarta merupakan sekolah terbagus dan terluas yang ada di Jakarta Timur<br>
+            Ada 5 jurusan yang siap mempersiapkan anda menjadi orang sukses
+        </p>
+    </div>
+
+
+    <div class="kepsek">
+        <div class="container">
+            <img src="images/darimun.jpeg" alt="Kepala SMK N 2 Purbalingga">
+
+            <div class="visiMisi">
+
+                <div class="visi">
+                    <h5>Our Vision</h5>
+                    <h3>Nurturing Leaders for God, Country and Community</h3>
+                </div>
+
+                <div class="misi">
+                    <h5>Our Mission</h5>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet cum id reiciendis laudantium esse
+                        fuga quo ullam possimus illum eum, quibusdam officiis perspiciatis aperiam sed sapiente incidunt
+                        sit veritatis fugiat quisquam eius odit. Iste sunt eius quos, earum harum cumque, quia quo,
+                        ipsam iusto enim inventore cupiditate nesciunt quisquam dolore!
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+   
+    <div class="container">
+        <h2>Form Pendaftaran</h2>
+        <form method="post">
+            <div class="form-group">
+                <label for="nama">Nama:</label>
+                <input type="text" id="nama" name="nama" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="jenis_kelamin">Jenis Kelamin:</label>
+                <input type="text" id="jenis_kelamin" name="jenis_kelamin" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="alamat">Alamat:</label>
+                <input type="text" id="alamat" name="alamat" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="agama">Agama:</label>
+                <input type="text" id="agama" name="agama" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="jurusan">Jurusan:</label>
+                <input type="text" id="jurusan" name="jurusan" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="asal_sekolah">Asal Sekolah:</label>
+                <input type="text" id="asal_sekolah" name="asal_sekolah" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+        <?php
+        // Panggil koneksi.php untuk melakukan koneksi ke database
+        require_once 'koneksi.php';
+        
+        // Cek apakah form telah disubmit
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            // Mengambil data dari form
+            $nama = $_POST['nama'] ?? '';
+            $jenis_kelamin = $_POST['jenis_kelamin'] ?? '';
+            $alamat = $_POST['alamat'] ?? '';
+            $agama = $_POST['agama'] ?? '';
+            $jurusan = $_POST['jurusan'] ?? '';
+            $asal_sekolah = $_POST['asal_sekolah'] ?? '';
+            
+            // Validasi data form
+            if (empty($nama) || empty($jenis_kelamin) || empty($alamat) || empty($agama) || empty($jurusan) || empty($asal_sekolah)) {
+                echo "<p>Semua field harus diisi.</p>";
+            } else {
+                try {
+                    // Menyiapkan statement SQL untuk memasukkan data ke dalam tabel
+                    $sql = "INSERT INTO pendaftran (nama, jenis_kelamin, alamat, agama, jurusan, asal_sekolah) 
+                            VALUES (:nama, :jenis_kelamin, :alamat, :agama, :jurusan, :asal_sekolah)";
+                    
+                    // Menyiapkan dan mengeksekusi statement
+                    $stmt = $pdo->prepare($sql);
+                    $stmt->bindParam(':nama', $nama);
+                    $stmt->bindParam(':jenis_kelamin', $jenis_kelamin);
+                    $stmt->bindParam(':alamat', $alamat);
+                    $stmt->bindParam(':agama', $agama);
+                    $stmt->bindParam(':jurusan', $jurusan);
+                    $stmt->bindParam(':asal_sekolah', $asal_sekolah);
+                    $stmt->execute();
+                    
+                    // Pesan keberhasilan
+                    echo "<p>Data berhasil dimasukkan ke dalam database.</p>";
+                } catch(PDOException $e) {
+                    // Pesan error koneksi database
+                    echo "Error: " . $e->getMessage();
+                }
+            }
+        }
+        ?>
+    </div>
+    
+
+
+    <div class="containerArtikelHome container">
+        <h2>Artikel Terbaru</h2>
+
+        <div class="artikelHome">
+
+
+            <a class="perArtikelHome">
+                <img src="images/1.jpg" alt="Foto Artikel">
+                <h3>Tutorial Login Laravel 8</h3>
+                <small>Di tulis oleh : <span>Rifki Romadhan</span></small>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti quo, iure repellendus explicabo
+                    delectus quasi amet libero iusto sequi at.
+                </p>
+            </a>
+
+            <a class="perArtikelHome">
+                <img src="images/1.jpg" alt="Foto Artikel">
+                <h3>Tutorial Login Laravel 8</h3>
+                <small>Di tulis oleh : <span>Rifki Romadhan</span></small>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti quo, iure repellendus explicabo
+                    delectus quasi amet libero iusto sequi at.
+                </p>
+            </a>
+
+
+            <a class="perArtikelHome">
+                <img src="images/1.jpg" alt="Foto Artikel">
+                <h3>Tutorial Login Laravel 8</h3>
+                <small>Di tulis oleh : <span>Rifki Romadhan</span></small>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti quo, iure repellendus explicabo
+                    delectus quasi amet libero iusto sequi at.
+                </p>
+            </a>
+
+
+            <a class="perArtikelHome">
+                <img src="images/1.jpg" alt="Foto Artikel">
+                <h3>Tutorial Login Laravel 8</h3>
+                <small>Di tulis oleh : <span>Rifki Romadhan</span></small>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti quo, iure repellendus
+                    explicabo
+                    delectus quasi amet libero iusto sequi at.
+                </p>
+            </a>
+
+
+            <a class="perArtikelHome">
+                <img src="images/1.jpg" alt="Foto Artikel">
+                <h3>Tutorial Login Laravel 8</h3>
+                <small>Di tulis oleh : <span>Rifki Romadhan</span></small>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti quo, iure repellendus
+                    explicabo
+                    delectus quasi amet libero iusto sequi at.
+                </p>
+            </a>
+
+
+            <a class="perArtikelHome">
+                <img src="images/1.jpg" alt="Foto Artikel">
+                <h3>Tutorial Login Laravel 8</h3>
+                <small>Di tulis oleh : <span>Rifki Romadhan</span></small>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti quo, iure repellendus
+                    explicabo
+                    delectus quasi amet libero iusto sequi at.
+                </p>
+            </a>
+
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- sosmed icon -->
+    <div class="iconBox">
+        <a href="" class="perIconBox wa">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+
+        <a href="" class="perIconBox fb">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+
+        <a href="" class="perIconBox ig">
+            <i class="fab fa-instagram"></i>
+        </a>
+
+        <a href="" class="perIconBox yt">
+            <i class="fab fa-youtube"></i>
+        </a>
+
+        <a href="" class="perIconBox linkin">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+    </div>
+
+    <div class="footer">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4 class="my-4 text-white text-center">Contact Us</h4>
+
+                    <div class="footerContactUs">
+
+                        <div class="perFooterContactUs">
+                            <i class="fas text-white fa-envelope"></i>
+                            <p class="text-white">official@smpn35jakarta.com</p>
+                        </div>
+
+                        <div class="perFooterContactUs">
+                            <i class="fas text-white fa-phone-alt"></i>
+                            <p class="text-white">023423434234</p>
+                        </div>
+
+                        <div class="perFooterContactUs">
+                            <i class="fas text-white fa-road"></i>
+                            <p class="text-white">Jl. K.H. Raiman No.3 6, RT.6/RW.3, Balekambang, Kec. Kramat jati</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+
+
+
+                <div class="col-md-4">
+                    <h4 class="my-4 text-center text-white">About</h4>
+                    <div class="footerAbout">
+                        <a href="" class="text-white">Artikel</a>
+                        <a href="" class="text-white">Galeri</a>
+                        <a href="" class="text-white">Contact Us</a>
+                        <a href="" class="text-white">Ekstrakulikuler</a>
+                    </div>
+                </div>
+
+
+                <div class="col-md-4 text-center">
+                    <h4 class="my-4 text-white">Newsletter</h4>
+                    <form>
+
+                        <div class="form-group">
+                            <input class="form-control" type="search" placeholder="Example@gmail.com"
+                                aria-label="Search">
+                            <button class="btn btn-primary btn-newsletter" type="submit">Kirim</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="footerCopyright">
+        <p class="text-white">
+            <i class="far fa-copyright"></i>2024 By : <span>M.Fajarudin</span>.& SMPN 35 <a
+                href="">
+                Jakarta</a>
+        </p>
+    </div>
+
+
+
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
