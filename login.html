@@ -6,14 +6,12 @@
     <title>Login Form</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Basic reset */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        /* Fullscreen background with image */
         body {
             display: flex;
             align-items: center;
@@ -24,7 +22,6 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
-        /* Centering container */
         .login-container {
             display: flex;
             align-items: center;
@@ -33,28 +30,25 @@
             padding: 20px;
         }
 
-        /* Styling the login box with transparency */
         .login-box {
             width: 360px;
             padding: 40px;
-            background: rgba(255, 255, 255, 0.2); /* More transparent */
+            background: rgba(255, 255, 255, 0.2);
             border-radius: 10px;
             box-shadow: 0 15px 25px rgba(0, 0, 0, 0.25);
-            border: 1px solid rgba(255, 255, 255, 0.2); /* Lighter border */
+            border: 1px solid rgba(255, 255, 255, 0.2);
             display: flex;
             flex-direction: column;
-            justify-content: flex-start; /* Align items to the top */
+            justify-content: flex-start;
         }
 
-        /* Header styling */
         .login-box h2 {
-            margin: 0 0 20px 0; /* Remove top margin and keep bottom margin */
+            margin: 0 0 20px 0;
             color: #333;
             font-size: 28px;
             text-align: center;
         }
 
-        /* Textbox styling */
         .textbox {
             margin-bottom: 20px;
         }
@@ -73,10 +67,9 @@
             outline: none;
         }
 
-        /* Button styling */
         .btn {
             width: 100%;
-            background: #e63946; /* Red color */
+            background: #e63946;
             border: none;
             padding: 15px;
             border-radius: 5px;
@@ -87,11 +80,10 @@
         }
 
         .btn:hover {
-            background: #d62839; /* Darker red */
+            background: #d62839;
             transform: scale(1.05);
         }
 
-        /* Register link styling */
         .register-link {
             margin-top: 20px;
             text-align: center;
@@ -117,7 +109,7 @@
     <div class="login-container">
         <div class="login-box">
             <h2>Login</h2>
-            <form id="loginForm">
+            <form>
                 <div class="textbox">
                     <input type="text" placeholder="Fullname" name="fullname" required>
                 </div>
@@ -131,39 +123,8 @@
                     <input type="text" placeholder="Tingkatan Sabuk" name="belt_rank" required>
                 </div>
                 <input type="submit" class="btn" value="Login">
-                <div id="responseMessage" style="color: red; margin-top: 20px; text-align: center;"></div>
             </form>
         </div>
     </div>
-
-    <script>
-        document.getElementById('loginForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent the default form submission
-            
-            var formData = new FormData(this);
-
-            fetch('process_login.php', {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => response.json())
-            .then(data => {
-                var responseMessage = document.getElementById('responseMessage');
-                if (data.success) {
-                    responseMessage.style.color = 'green';
-                    responseMessage.textContent = data.message;
-                    // Optionally, redirect to another page
-                    // window.location.href = 'dashboard.php';
-                } else {
-                    responseMessage.style.color = 'red';
-                    responseMessage.textContent = data.message;
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                document.getElementById('responseMessage').textContent = 'An error occurred.';
-            });
-        });
-    </script>
 </body>
 </html>
