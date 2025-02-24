@@ -873,13 +873,21 @@
     background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease; /* Smooth transition */
+    opacity: 0; /* Initially hidden */
+    transform: translateY(50px); /* Initially move it down */
+    animation: fadeInSlideUp 1.5s forwards; /* Apply animation */
   }
   
-  /* Hover effect for article container */
-  .article-container:hover {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    transform: translateY(-10px); /* Slightly lift the container */
+  /* Fade and Slide animation */
+  @keyframes fadeInSlideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(50px); /* Start off the screen */
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0); /* Slide up to normal position */
+    }
   }
   
   /* Article Content (Text) */
@@ -915,16 +923,17 @@
     position: relative;
     overflow: hidden;
     border-radius: 8px;
+    animation: fadeInSlideUp 1.5s forwards 0.5s; /* Slight delay to make the image appear after the text */
   }
   
-  /* Image Hover Effect */
+  /* Image Styling */
   .article-image img {
     width: 100%;
     height: auto;
     border-radius: 8px;
     object-fit: cover;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.5s ease; /* Smooth zoom effect */
+    transition: transform 0.5s ease;
   }
   
   .article-image:hover img {
@@ -952,9 +961,11 @@
       width: 100%; /* Image takes 100% of the width on mobile */
       margin-left: 0; /* Remove the margin when stacked */
       margin-bottom: 20px; /* Space between the image and content */
+      animation: none; /* Remove animation on mobile */
     }
   }
   </style>
+  
   
 <body>
     <nav class="navbar navbar-expand-lg navbar-light navbarHome fixed-top">
