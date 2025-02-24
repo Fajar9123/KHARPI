@@ -853,93 +853,109 @@
   }
 </style>
 <style>
-/* Global body styles */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
-}
-
-/* Article Container */
-.article-container {
-  display: flex;
-  flex-direction: row; /* Default layout for desktop (text on left, image on right) */
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: 40px auto;
-  padding: 30px;
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Article Content (Text) */
-.article-content {
-  width: 60%; /* Text takes 60% of the width */
-  font-size: 1.1rem;
-  color: #555;
-  line-height: 1.8;
-  text-align: justify;
-  margin-bottom: 20px;
-}
-
-/* Heading */
-.article-content h2 {
-  font-size: 2.5rem;
-  color: #333;
-  margin-bottom: 20px;
-  font-weight: bold;
-  text-align: center;
-}
-
-/* Paragraphs */
-.article-content p {
-  margin-bottom: 20px;
-  color: #666;
-}
-
-/* Image on the right */
-.article-image {
-  width: 35%; /* Image takes 35% of the width */
-  margin-left: 20px; /* Adds space between text and image */
-}
-
-.article-image img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  object-fit: cover;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Mobile Responsive Design */
-@media (max-width: 768px) {
-  /* Stack elements vertically on mobile */
+  /* Global body styles */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  /* Article Container */
   .article-container {
-    flex-direction: column; /* Stack text and image vertically */
-    padding: 20px;
-    margin: 20px;
+    display: flex;
+    flex-direction: row; /* Default layout for desktop (text on left, image on right) */
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease; /* Smooth transition */
   }
-
-  /* Text should take full width in mobile */
+  
+  /* Hover effect for article container */
+  .article-container:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-10px); /* Slightly lift the container */
+  }
+  
+  /* Article Content (Text) */
   .article-content {
-    width: 100%;
-    font-size: 1rem;
-    margin-top: 20px; /* Space between the image and the text */
+    width: 60%; /* Text takes 60% of the width */
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
+    text-align: justify;
+    margin-bottom: 20px;
   }
-
-  /* Image should also take full width in mobile */
+  
+  /* Heading */
+  .article-content h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+    transition: color 0.3s ease;
+  }
+  
+  /* Paragraphs */
+  .article-content p {
+    margin-bottom: 20px;
+    color: #666;
+  }
+  
+  /* Image on the right */
   .article-image {
-    width: 100%; /* Image takes 100% of the width on mobile */
-    margin-left: 0; /* Remove the margin when stacked */
-    margin-bottom: 20px; /* Space between the image and content */
+    width: 35%; /* Image takes 35% of the width */
+    margin-left: 20px; /* Adds space between text and image */
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
   }
-}
-
-
-</style>
+  
+  /* Image Hover Effect */
+  .article-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s ease; /* Smooth zoom effect */
+  }
+  
+  .article-image:hover img {
+    transform: scale(1.1); /* Zoom in when hovering */
+  }
+  
+  /* Mobile Responsive Design */
+  @media (max-width: 768px) {
+    /* Stack elements vertically on mobile */
+    .article-container {
+      flex-direction: column; /* Stack text and image vertically */
+      padding: 20px;
+      margin: 20px;
+    }
+  
+    /* Text should take full width in mobile */
+    .article-content {
+      width: 100%;
+      font-size: 1rem;
+      margin-top: 20px; /* Space between the image and the text */
+    }
+  
+    /* Image should also take full width in mobile */
+    .article-image {
+      width: 100%; /* Image takes 100% of the width on mobile */
+      margin-left: 0; /* Remove the margin when stacked */
+      margin-bottom: 20px; /* Space between the image and content */
+    }
+  }
+  </style>
+  
 <body>
     <nav class="navbar navbar-expand-lg navbar-light navbarHome fixed-top">
       <div class="container">
@@ -979,6 +995,7 @@ body {
       </div>
     </nav>
   
+   
     <ul id="autoWidth" class="cs-hidden">
       <li class="item-a">
         <section class="slideshow">
@@ -1008,7 +1025,8 @@ body {
         </p>
       </div>
     </div>
-  </body>
+</body>
+  
   
   
     <!-- sosmed icon -->
