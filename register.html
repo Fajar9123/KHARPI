@@ -1,32 +1,3 @@
-<?php
-include 'portalberita/config/koneksi.php';
-
-// Check if the form is submitted
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Retrieve and sanitize form data
-    $fullname = $mysqli->real_escape_string($_POST['fullname']);
-    $email = $mysqli->real_escape_string($_POST['email']);
-    $phone = $mysqli->real_escape_string($_POST['phone']);
-    $belt_rank = $mysqli->real_escape_string($_POST['belt_rank']);
-    $password = $mysqli->real_escape_string($_POST['password']);
-
-    // Hash the password
-    $hashed_password = password_hash($password, PASSWORD_BCRYPT);
-
-    // SQL query to insert data into the register table
-    $sql = "INSERT INTO register (nama_lengkap, email, phone, belt_rank, password) VALUES ('$fullname', '$email', '$phone', '$belt_rank', '$hashed_password')";
-
-    // Execute query and check for success
-    if ($mysqli->query($sql) === TRUE) {
-        echo "Pendaftaran berhasil!";
-    } else {
-        echo "Error: " . $sql . "<br>" . $mysqli->error;
-    }
-
-    // Close the connection
-    $mysqli->close();
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
