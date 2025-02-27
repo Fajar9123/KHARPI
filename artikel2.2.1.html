@@ -860,7 +860,7 @@
     padding: 0;
     background-color: #f4f4f4;
   }
-  
+
   /* Article Container */
   .article-container {
     display: flex;
@@ -875,13 +875,13 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease; /* Smooth transition */
   }
-  
+
   /* Hover effect for article container */
   .article-container:hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     transform: translateY(-10px); /* Slightly lift the container */
   }
-  
+
   /* Article Content (Text) */
   .article-content {
     width: 60%; /* Text takes 60% of the width */
@@ -891,9 +891,9 @@
     text-align: justify;
     margin-bottom: 20px;
   }
-  
+
   /* Heading */
-  .article-content h2 {
+  .article-content h3 {
     font-size: 2.5rem;
     color: #333;
     margin-bottom: 20px;
@@ -901,36 +901,19 @@
     text-align: center;
     transition: color 0.3s ease;
   }
-  
+
   /* Paragraphs */
   .article-content p {
     margin-bottom: 20px;
     color: #666;
   }
-  
-  /* Image on the right */
-  .article-image {
-    width: 35%; /* Image takes 35% of the width */
-    margin-left: 20px; /* Adds space between text and image */
-    position: relative;
-    overflow: hidden;
-    border-radius: 8px;
+
+  /* Video styling */
+  .article-video {
+    width: 100%; /* Video should take full width */
+    margin-bottom: 20px;
   }
-  
-  /* Image Hover Effect */
-  .article-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    object-fit: cover;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.5s ease; /* Smooth zoom effect */
-  }
-  
-  .article-image:hover img {
-    transform: scale(1.1); /* Zoom in when hovering */
-  }
-  
+
   /* Mobile Responsive Design */
   @media (max-width: 768px) {
     /* Stack elements vertically on mobile */
@@ -939,22 +922,22 @@
       padding: 20px;
       margin: 20px;
     }
-  
+
     /* Text should take full width in mobile */
     .article-content {
       width: 100%;
       font-size: 1rem;
       margin-top: 20px; /* Space between the image and the text */
     }
-  
-    /* Image should also take full width in mobile */
-    .article-image {
-      width: 100%; /* Image takes 100% of the width on mobile */
-      margin-left: 0; /* Remove the margin when stacked */
-      margin-bottom: 20px; /* Space between the image and content */
+
+    /* Video should also take full width in mobile */
+    .article-video {
+      width: 100%; /* Video takes 100% of the width on mobile */
+      margin-left: 0;
+      margin-bottom: 20px; /* Space between the video and content */
     }
   }
-  </style>
+</style>
   
 <body>
     <nav class="navbar navbar-expand-lg navbar-light navbarHome fixed-top">
@@ -1011,46 +994,22 @@
           Your browser does not support the video tag.
         </video>
       </div>
-      
+    
       <div class="article-content">
-        <h3>Panca Prasetya Kesatria Harimau Putih Indonesia</h3>
-        <p>Dengan Rahmat dan Kehadirat Tuhan Yang Maha Esa, Kami berjanji:</p>
-        
-        <ol>
-          <li><strong>Kami kesatria yang taat kepada Tuhan Yang Maha Esa</strong></li>
-          <p>Kesatria yang senantiasa menghormati dan mematuhi perintah Tuhan sebagai landasan hidup dan pedoman dalam bertindak.</p>
-          
-          <li><strong>Kami kesatria yang patuh dan setia kepada Orang tua dan Guru</strong></li>
-          <p>Seorang kesatria yang menjunjung tinggi rasa hormat terhadap orang tua dan guru, sebagai sumber pengetahuan dan kebijaksanaan.</p>
-          
-          <li><strong>Kami kesatria yang menjunjung tinggi Persaudaraan dan Kekeluargaan</strong></li>
-          <p>Kesatria yang selalu mengutamakan persatuan dan keharmonisan dalam segala aspek kehidupan, baik di dalam keluarga maupun dalam pergaulan.</p>
-          
-          <li><strong>Kami Kesatria adalah pewaris keilmuan Pencak Silat</strong></li>
-          <p>Kesatria yang menjaga dan melestarikan ilmu pencak silat sebagai warisan budaya yang sangat berharga untuk generasi mendatang.</p>
-          
-          <li><strong>Kami Kesatria siap menjaga diri, keluarga, bangsa dan Negara</strong></li>
-          <p>Kesatria yang siap menjaga keamanan dan kehormatan diri, keluarga, bangsa, dan negara dari segala ancaman demi kebaikan bersama.</p>
-        </ol>
-        
         <h3>Kesatria Harimau Putih Indonesia</h3>
-        <p><strong>Kami adalah para kesatria sejati</strong></p>
-        <p><strong>Kami adalah kesatria sejati</strong></p>
-        <p><strong>Siap berjuang, siap berjuang</strong></p>
-        <p><strong>Untuk kebenaran dalam kebaikan</strong></p>
-        <p><strong>Tak gentar siapa musuh kami</strong></p>
-        <p><strong>Tak takut siapa lawan kami</strong></p>
-        <p><strong>Kami hadapi dengan kekuatan yang ada di dalam jiwa dan raga kami</strong></p>
-        <p><strong>Tanpa rasa takut, tanpa rasa gentar</strong></p>
-        <p><strong>Karena kami kesatria sejati</strong></p>
-        <p><strong>Karena kami kesatria sejati</strong></p>
-        <p><strong>Kesatria Harimau Putih Indonesia</strong></p>
+        <p><strong>Kami adalah kesatria sejati,</strong></p>
+        <p><strong>Kesatria sejati yang siap berjuang,</strong></p>
+        <p><strong>Siap berjuang demi kebenaran dan kebaikan.</strong></p>
+        <p><strong>Tak gentar menghadapi musuh kami,</strong></p>
+        <p><strong>Tak takut menghadapi lawan kami.</strong></p>
+        <p><strong>Kami hadapi segala tantangan dengan kekuatan jiwa dan raga kami,</strong></p>
+        <p><strong>Tanpa rasa takut, tanpa rasa gentar.</strong></p>
+        <p><strong>Karena kami adalah kesatria sejati.</strong></p>
+        <p><strong>Kami adalah kesatria sejati,</strong></p>
+        <p><strong>Kesatria Harimau Putih Indonesia.</strong></p>
       </div>
     </div>
-    </body>
     
-    
-  
   
     <!-- sosmed icon -->
     <div class="iconBox">
