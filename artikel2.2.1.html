@@ -854,15 +854,15 @@
 </style>
 <style>
   /* Global body styles */
-  body {
+body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-  }
+}
 
-  /* Article Container */
-  .article-container {
+/* Article Container */
+.article-container {
     display: flex;
     flex-direction: row; /* Default layout for desktop (text on left, image on right) */
     justify-content: space-between;
@@ -874,142 +874,162 @@
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease; /* Smooth transition */
-  }
+}
 
-  /* Hover effect for article container */
-  .article-container:hover {
+/* Hover effect for article container */
+.article-container:hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     transform: translateY(-10px); /* Slightly lift the container */
-  }
+}
 
-  /* Article Content (Text) */
-  .article-content {
+/* Article Content (Text) */
+.article-content {
     width: 60%; /* Text takes 60% of the width */
     font-size: 1.1rem;
     color: #555;
-    line-height: 1.8;
-    text-align: justify;
+    line-height: 1.8; /* Adjust line-height for better readability */
+    text-align: justify; /* Ensure text is aligned evenly */
     margin-bottom: 20px;
-  }
+    margin-left: 30px; /* Add margin to the left side */
+    padding-right: 20px; /* Ensure some padding on the right side for better balance */
+}
 
-  /* Heading */
-  .article-content h3 {
+/* Heading */
+.article-content h3 {
     font-size: 2.5rem;
     color: #333;
     margin-bottom: 20px;
     font-weight: bold;
     text-align: center;
     transition: color 0.3s ease;
-  }
+}
 
-  /* Paragraphs */
-  .article-content p {
+/* Paragraphs */
+.article-content p {
     margin-bottom: 20px;
     color: #666;
-  }
+    text-align: justify; /* Justify each paragraph for even alignment */
+    margin-left: 0;
+    margin-right: 0;
+}
 
-  /* Video styling */
-  .article-video {
+/* Specific Paragraph Styling (for spacing or different styling per paragraph) */
+.article-content p strong {
+    font-weight: bold; /* Keeps strong text bold */
+}
+
+/* Optional: Adjust for readability on long texts */
+.article-content p:last-child {
+    margin-bottom: 0; /* Removes bottom margin from the last paragraph */
+}
+
+
+
+/* Video styling */
+.article-video {
     width: 100%; /* Video should take full width */
-    margin-bottom: 20px;
-  }
+    margin-right: 30px; /* Add margin to the right side to space it from the text */
+}
 
-  /* Mobile Responsive Design */
-  @media (max-width: 768px) {
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
     /* Stack elements vertically on mobile */
     .article-container {
-      flex-direction: column; /* Stack text and image vertically */
-      padding: 20px;
-      margin: 20px;
+        flex-direction: column; /* Stack text and image vertically */
+        padding: 20px;
+        margin: 20px;
     }
 
     /* Text should take full width in mobile */
     .article-content {
-      width: 100%;
-      font-size: 1rem;
-      margin-top: 20px; /* Space between the image and the text */
+        width: 100%;
+        font-size: 1rem;
+        margin-top: 20px; /* Space between the image and the text */
     }
 
     /* Video should also take full width in mobile */
     .article-video {
-      width: 100%; /* Video takes 100% of the width on mobile */
-      margin-left: 0;
-      margin-bottom: 20px; /* Space between the video and content */
+        width: 100%; /* Video takes 100% of the width on mobile */
+        margin-left: 0;
+        margin-bottom: 20px; /* Space between the video and content */
     }
-  }
+}
+
 </style>
-  
+</head>
+
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light navbarHome fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="#">
-          <img src="img/logo2.png" alt="Logo kharpi">
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light navbarHome fixed-top">
+  <div class="container">
+      <a class="navbar-brand" href="#">
+          <img src="img/logo2.png" alt="Logo Kharpi">
           <h1 style="color: black;">KESATRIA HARIMAU<br>PUTIH INDONESIA</h1>
-        </a>
-    
-        <button class="navbar-toggler hamburger" type="button" data-toggle="collapse"
+      </a>
+      <button class="navbar-toggler hamburger" type="button" data-toggle="collapse"
           data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
           aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
-        </button>
-    
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="index.html" style="color: black;">Home</a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="" style="color: black;">Artikel</a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="kontak.html" style="color: black;">Kontak Kami</a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="login1.html" style="color: black;">Login</a>
-            </li>
+              <li class="nav-item active">
+                  <a class="nav-link" href="index.html" style="color: black;">Home</a>
+              </li>
+              <li class="nav-item active">
+                  <a class="nav-link" href="" style="color: black;">Artikel</a>
+              </li>
+              <li class="nav-item active">
+                  <a class="nav-link" href="kontak.html" style="color: black;">Kontak Kami</a>
+              </li>
+              <li class="nav-item active">
+                  <a class="nav-link" href="login1.html" style="color: black;">Login</a>
+              </li>
           </ul>
           <form class="form-inline my-2 my-lg-0">
-            <input class="form-control sm-2" type="search" placeholder="Cari Artikel" aria-label="Search">
-            <button class="btn btn-primary sm-0" type="submit">
-              <i class="fas fa-search"></i>
-            </button>
+              <input class="form-control sm-2" type="search" placeholder="Cari Artikel" aria-label="Search">
+              <button class="btn btn-primary sm-0" type="submit">
+                  <i class="fas fa-search"></i>
+              </button>
           </form>
-        </div>
       </div>
-    </nav>
-  
-   
-    <ul id="autoWidth" class="cs-hidden">
-      <li class="item-a">
-        <section class="slideshow">
+  </div>
+</nav>
+
+<!-- Slideshow Section -->
+<ul id="autoWidth" class="cs-hidden">
+  <li class="item-a">
+      <section class="slideshow">
           <img class="satu" src="img/kharpi1.jpg" alt="Team Work" style="width: 100vw; height: 95vh; object-fit: cover;">
-        </section>
-      </li>
-    </ul>
-    
-    <div class="article-container">
-      <div class="article-video">
-        <video width="100%" height="auto" controls>
+      </section>
+  </li>
+</ul>
+
+<!-- Article Container -->
+<div class="article-container">
+  <!-- Video Section -->
+  <div class="article-video">
+      <video width="100%" height="auto" controls>
           <source src="img/mars.mp4" type="video/mp4">
           Your browser does not support the video tag.
-        </video>
-      </div>
-    
-      <div class="article-content">
-        <h3>Kesatria Harimau Putih Indonesia</h3>
-        <p><strong>Kami adalah kesatria sejati,</strong></p>
-        <p><strong>Kesatria sejati yang siap berjuang,</strong></p>
-        <p><strong>Siap berjuang demi kebenaran dan kebaikan.</strong></p>
-        <p><strong>Tak gentar menghadapi musuh kami,</strong></p>
-        <p><strong>Tak takut menghadapi lawan kami.</strong></p>
-        <p><strong>Kami hadapi segala tantangan dengan kekuatan jiwa dan raga kami,</strong></p>
-        <p><strong>Tanpa rasa takut, tanpa rasa gentar.</strong></p>
-        <p><strong>Karena kami adalah kesatria sejati.</strong></p>
-        <p><strong>Kami adalah kesatria sejati,</strong></p>
-        <p><strong>Kesatria Harimau Putih Indonesia.</strong></p>
-      </div>
-    </div>
-    
+      </video>
+  </div>
+
+  <!-- Article Content Section -->
+  <div class="article-content">
+      <h3>Mars Kesatria Harimau Putih Indonesia</h3>
+      <p><strong>Kami adalah kesatria sejati,</strong></p>
+      <p><strong>Kesatria sejati yang siap berjuang,</strong></p>
+      <p><strong>Siap berjuang demi kebenaran dan kebaikan.</strong></p>
+      <p><strong>Tak gentar menghadapi musuh kami,</strong></p>
+      <p><strong>Tak takut menghadapi lawan kami.</strong></p>
+      <p><strong>Kami hadapi segala tantangan dengan kekuatan jiwa dan raga kami,</strong></p>
+      <p><strong>Tanpa rasa takut, tanpa rasa gentar.</strong></p>
+      <p><strong>Karena kami adalah kesatria sejati.</strong></p>
+      <p><strong>Kami adalah kesatria sejati,</strong></p>
+      <p><strong>Kesatria Harimau Putih Indonesia.</strong></p>
+  </div>
+</div>
   
     <!-- sosmed icon -->
     <div class="iconBox">
