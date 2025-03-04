@@ -933,25 +933,30 @@ body {
 
 /* Mobile Responsive Design */
 @media (max-width: 768px) {
-    /* Stack elements vertically on mobile */
     .article-container {
-        flex-direction: column; /* Stack text and image vertically */
+        flex-direction: column;
         padding: 20px;
         margin: 20px;
     }
 
-    /* Text should take full width in mobile */
     .article-content {
         width: 100%;
         font-size: 1rem;
-        margin-top: 20px; /* Space between the image and the text */
+        margin-top: 20px;
     }
 
-    /* Video should also take full width in mobile */
+    /* Center video on mobile */
     .article-video {
-        width: 100%; /* Video takes 100% of the width on mobile */
-        margin-left: 0;
-        margin-bottom: 20px; /* Space between the video and content */
+        width: 100%; /* Make video full width */
+        margin: 20px 0; /* Add some space above and below the video */
+        text-align: center; /* Center the video horizontally */
+    }
+
+    /* Center the video element inside the container */
+    .article-video video {
+        display: block; /* Ensures the video is treated as a block-level element */
+        margin-left: auto; /* Centers the video horizontally */
+        margin-right: auto; /* Centers the video horizontally */
     }
 }
 
