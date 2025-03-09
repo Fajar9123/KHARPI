@@ -853,7 +853,7 @@
   }
 </style>
 <style>
-  /* Global body styles */
+/* Global body styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -864,7 +864,7 @@ body {
 /* Article Container */
 .article-container {
     display: flex;
-    flex-direction: row; /* Default layout for desktop (text on left, image on right) */
+    flex-direction: row; /* Default: Teks kiri, video kanan */
     justify-content: space-between;
     align-items: center;
     max-width: 1200px;
@@ -873,90 +873,93 @@ body {
     background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease; /* Smooth transition */
+    transition: all 0.3s ease;
+    gap: 20px; /* Jarak otomatis antar elemen */
 }
 
-/* Hover effect for article container */
+/* Hover effect */
 .article-container:hover {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    transform: translateY(-10px); /* Slightly lift the container */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    transform: translateY(-3px);
 }
 
 /* Article Content (Text) */
 .article-content {
-    width: 60%; /* Text takes 60% of the width */
+    width: 60%;
     font-size: 1.1rem;
     color: #555;
-    line-height: 1.8; /* Adjust line-height for better readability */
-    text-align: justify; /* Ensure text is aligned evenly */
-    margin-bottom: 20px;
-    margin-left: 30px; /* Add margin to the left side */
-    padding-right: 20px; /* Ensure some padding on the right side for better balance */
+    line-height: 1.8;
+    text-align: justify;
+    max-width: 700px; /* Batas maksimal agar tidak terlalu panjang */
 }
 
 /* Heading */
 .article-content h3 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: #333;
     margin-bottom: 20px;
     font-weight: bold;
     text-align: center;
-    transition: color 0.3s ease;
 }
 
-/* Paragraphs */
+/* Paragraph Styling */
 .article-content p {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     color: #666;
-    text-align: justify; /* Justify each paragraph for even alignment */
-    margin-left: 0;
-    margin-right: 0;
+    text-align: justify;
 }
 
-/* Specific Paragraph Styling (for spacing or different styling per paragraph) */
-.article-content p strong {
-    font-weight: bold; /* Keeps strong text bold */
-}
-
-/* Optional: Adjust for readability on long texts */
-.article-content p:last-child {
-    margin-bottom: 0; /* Removes bottom margin from the last paragraph */
-}
-
-
-
-/* Video styling */
+/* Video Container */
 .article-video {
-    width: 100%; /* Video should take full width */
-    margin-right: 30px; /* Add margin to the right side to space it from the text */
+    width: 40%;
+    text-align: center;
 }
 
-/* Mobile Responsive Design */
+/* Video Styling */
+.article-video video {
+    width: 100%;
+    max-width: 500px; /* Batas maksimal agar tidak terlalu besar */
+    border-radius: 8px;
+}
+
+/* Animasi saat elemen muncul di-scroll */
+.hidden {
+    opacity: 0;
+    transform: translateY(30px); /* Geser ke bawah */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Mobile Responsive */
 @media (max-width: 768px) {
     .article-container {
         flex-direction: column;
         padding: 20px;
         margin: 20px;
+        text-align: center;
     }
 
     .article-content {
         width: 100%;
         font-size: 1rem;
+        max-width: none;
+    }
+
+    .article-video {
+        width: 100%;
         margin-top: 20px;
     }
 
-    /* Center video on mobile */
-    .article-video {
-        width: 100%; /* Make video full width */
-        margin: 20px 0; /* Add some space above and below the video */
-        text-align: center; /* Center the video horizontally */
+    .article-video video {
+        max-width: 100%;
     }
 
-    /* Center the video element inside the container */
-    .article-video video {
-        display: block; /* Ensures the video is treated as a block-level element */
-        margin-left: auto; /* Centers the video horizontally */
-        margin-right: auto; /* Centers the video horizontally */
+    .article-content h3 {
+        font-size: 1.5rem;
     }
 }
 
@@ -1022,18 +1025,15 @@ body {
 
   <!-- Article Content Section -->
   <div class="article-content">
-      <h3>Mars Kesatria Harimau Putih Indonesia</h3>
-      <p><strong>Kami adalah kesatria sejati,</strong></p>
-      <p><strong>Kesatria sejati yang siap berjuang,</strong></p>
-      <p><strong>Siap berjuang demi kebenaran dan kebaikan.</strong></p>
-      <p><strong>Tak gentar menghadapi musuh kami,</strong></p>
-      <p><strong>Tak takut menghadapi lawan kami.</strong></p>
-      <p><strong>Kami hadapi segala tantangan dengan kekuatan jiwa dan raga kami,</strong></p>
-      <p><strong>Tanpa rasa takut, tanpa rasa gentar.</strong></p>
-      <p><strong>Karena kami adalah kesatria sejati.</strong></p>
-      <p><strong>Kami adalah kesatria sejati,</strong></p>
-      <p><strong>Kesatria Harimau Putih Indonesia.</strong></p>
-  </div>
+    <h3>Mars Kesatria Harimau Putih Indonesia</h3>
+    <p><strong>Kami adalah kesatria sejati,</strong> kesatria yang siap berjuang.</p>
+    <p><strong>Siap berjuang demi kebenaran dan kebaikan.</strong></p>
+    <p><strong>Tak gentar menghadapi musuh, tak takut menghadapi lawan.</strong></p>
+    <p><strong>Kami hadapi segala tantangan dengan kekuatan jiwa dan raga,</strong></p>
+    <p><strong>tanpa rasa takut, tanpa rasa gentar.</strong></p>
+    <p><strong>Karena kami adalah kesatria sejati.</strong></p>
+    <p><strong>Kami adalah Kesatria Harimau Putih Indonesia.</strong></p>
+</div>
 </div>
   
     <!-- sosmed icon -->
