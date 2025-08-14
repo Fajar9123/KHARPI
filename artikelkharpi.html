@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berita Kesatria Harimau Putih Indonesia</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #C81C1C;
+            --secondary-color: #FFFFFF;
+            --background-color: #F8F9FA;
+            --text-color: #333333;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            padding-top: 56px;
+        }
+        
+        .navbar {
+            background-color: var(--primary-color) !important;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand img {
+            width: 45px;
+            height: 45px;
+            margin-right: 10px;
+        }
+
+        .navbar-brand span {
+            font-size: 1.2rem;
+            color: var(--secondary-color);
+            margin: 0;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .nav-link {
+            color: var(--secondary-color) !important;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: #E0E0E0 !important;
+        }
+
+        /* Hero Section Styling */
+        .hero {
+            position: relative;
+            height: 90vh;
+            background-image: url('img/kharpi1.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-start;
+            z-index: 1;
+            padding-bottom: 2rem;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: -1;
+        }
+
+        .hero-content {
+            color: var(--secondary-color);
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+            padding: 3rem;
+            text-align: left;
+            z-index: 10;
+        }
+        
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-content .lead {
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+        
+        .hero-content p {
+            font-size: 1.1rem;
+            font-weight: 400;
+            max-width: 700px;
+        }
+
+        .hero-content .btn {
+            margin-top: 1.5rem;
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            border: none;
+            padding: 0.8rem 2.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+
+        .hero-content .btn:hover {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 2rem;
+            text-align: center;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 0.5rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60%;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+
+        .article-card {
+            background-color: var(--secondary-color);
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .article-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .article-card img {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            object-fit: cover;
+            height: 200px;
+            width: 100%;
+        }
+
+        .article-card .card-body h5 {
+            font-weight: 600;
+            color: var(--text-color);
+            transition: color 0.3s;
+        }
+
+        .article-card a {
+            text-decoration: none;
+            color: var(--text-color);
+        }
+        
+        .article-card a:hover h5 {
+            color: var(--primary-color);
+        }
+
+        .sidebar-article {
+            background-color: var(--secondary-color);
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+        }
+
+        .sidebar-article img {
+            width: 100px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-right: 15px;
+        }
+
+        .sidebar-article a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .sidebar-article a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Pagination Styling */
+        .pagination {
+            justify-content: center;
+            margin-top: 2rem;
+        }
+        
+        .page-link {
+            color: var(--primary-color);
+            border-color: var(--primary-color);
+            border-radius: 5px;
+            margin: 0 5px;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+        
+        .page-item.active .page-link {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            color: var(--secondary-color);
+        }
+        
+        .page-link:hover {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+        }
+        
+        /* Gaya untuk Horizontal Scroll di Artikel Pilihan */
+        #artikel-pilihan-container {
+            display: flex;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        #artikel-pilihan-container::-webkit-scrollbar {
+            display: none;
+        }
+
+        #artikel-pilihan-container .col-md-6 {
+            flex: 0 0 50%;
+        }
+
+        @media (max-width: 768px) {
+            #artikel-pilihan-container .col-md-6 {
+                flex: 0 0 100%;
+            }
+        }
+        /* Akhir Gaya Horizontal Scroll */
+        
+        .iconBox {
+            position: fixed;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1000;
+        }
+
+        .iconBox .perIconBox {
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+            border-radius: 50%;
+            transition: transform 0.3s;
+        }
+        
+        .iconBox .perIconBox:hover {
+            transform: scale(1.1);
+        }
+
+        .wa { background-color: #25D366; }
+        .fb { background-color: #4867AA; }
+        .ig { background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); }
+        .yt { background-color: #FF0000; }
+        .linkin { background-color: #0077B5; }
+
+        .footer {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            padding: 2rem 0;
+        }
+        
+        .footer h4 {
+            color: var(--secondary-color);
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .footer p {
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer a:hover {
+            color: #E0E0E0;
+        }
+
+        .footer .list-unstyled a {
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        /* --- Media Queries untuk Responsivitas --- */
+        @media (max-width: 768px) {
+            /* Navbar */
+            .navbar-brand span { font-size: 1rem; }
+            .navbar-toggler { border-color: rgba(255, 255, 255, 0.5); }
+            .navbar-collapse { background-color: var(--primary-color); border-top: 1px solid rgba(255, 255, 255, 0.2); }
+            .form-inline .form-control { width: 100%; margin-bottom: 10px; }
+            
+            /* Hero Section */
+            .hero { min-height: 100vh; align-items: flex-end; justify-content: center; padding-bottom: 1.5rem; }
+            .hero-content { padding: 1.5rem; text-align: center; }
+            .hero-content h1 { font-size: 2.5rem; line-height: 1.2; }
+            .hero-content .lead, .hero-content p { font-size: 1rem; display: block !important; max-width: 100%; margin-left: auto; margin-right: auto; }
+            .hero-content .btn { padding: 0.6rem 2rem; font-size: 1rem; }
+            
+            /* Main Content */
+            .main-content { padding: 2rem 0; }
+            .section-title { font-size: 1.5rem; margin-bottom: 1.5rem; display: block; }
+            .article-card { margin-bottom: 1rem; }
+            .article-card img { height: 180px; }
+            
+            /* Sidebar */
+            .col-lg-4 { margin-top: 2rem; }
+            .sidebar-article { padding: 1rem; }
+            .sidebar-article img { width: 80px; height: 50px; margin-right: 10px; }
+            
+            /* Social Media Icons */
+            .iconBox { position: static; transform: none; display: flex; justify-content: center; padding: 1rem 0; }
+            .iconBox .perIconBox { margin: 0 5px; }
+            
+            /* Footer */
+            .footer { padding: 1rem 0; }
+            .footer .col-md-4 { text-align: center; margin-bottom: 1.5rem; }
+        }
+
+        /* Ukuran layar desktop (> 768px) */
+        @media (min-width: 769px) {
+            .hero { height: 90vh; }
+            .iconBox { position: fixed; right: 10px; top: 50%; transform: translateY(-50%); flex-direction: column; }
+            .iconBox .perIconBox { margin-bottom: 10px; }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="img/logo2.png" alt="Logo">
+                <span>Artikel <br>KHARPI</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item active"><a class="nav-link" href="#">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Nasional</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Internasional</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Olahraga</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Hubungi Kami</a></li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Cari Artikel">
+                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>KHARPI</h1>
+                <p class="lead">Kesatria Harimau Putih Indonesia</p>
+                <p>Menjaga warisan budaya dan semangat kepemimpinan bangsa.</p>
+                <a href="#" class="btn btn-danger btn-lg">Telusuri Lebih Lanjut</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container main-content">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="text-center">
+                    <h2 class="section-title">Berita Utama</h2>
+                </div>
+                <div class="card article-card mb-4">
+                    <a href="#">
+                        <img src="https://via.placeholder.com/800x500/C81C1C/FFFFFF?text=KHARPI+Pencak+Silat" class="card-img-top" alt="Gambar Berita Utama">
+                        <div class="card-body">
+                            <h5 class="card-title">KHARPI, Perguruan Pencak Silat yang Berkomitmen Lestarikan Budaya Nasional</h5>
+                            <p class="card-text text-muted">Kesatria Harimau Putih Indonesia (KHARPI) adalah sebuah perguruan pencak silat yang didirikan dengan satu misi utama: **melestarikan dan mengembangkan warisan keilmuan pencak silat yang telah menjadi bagian tak terpisahkan dari budaya bangsa**. Dalam perkembangannya, KHARPI tidak hanya berfokus pada aspek bela diri, tetapi juga menanamkan nilai-nilai luhur seperti kedisiplinan, sportivitas, dan semangat persatuan kepada setiap anggotanya.</p>
+                            <p class="card-text text-muted">Didukung oleh para praktisi dan sesepuh pencak silat, KHARPI berupaya agar seni bela diri ini tidak hanya dikenal di Indonesia, tetapi juga di kancah internasional. Melalui berbagai program pelatihan, seminar, dan partisipasi aktif dalam kejuaraan, KHARPI membuktikan bahwa pencak silat masih relevan dan terus berkembang di era modern.</p>
+                            <p class="card-text text-muted">Sebagai salah satu pilar pelestarian budaya, KHARPI terus membuka diri bagi generasi muda yang ingin mengenal dan menguasai pencak silat. "Kami percaya bahwa menjaga warisan nenek moyang adalah tanggung jawab kita bersama," ujar salah satu perwakilan KHARPI. Dengan semangat itu, KHARPI berharap dapat terus melahirkan pesilat-pesilat berprestasi yang berjiwa ksatria dan bangga akan identitas bangsanya.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="text-center">
+                    <h2 class="section-title">Artikel Pilihan</h2>
+                </div>
+                
+                <div id="artikel-pilihan-container">
+                    <div class="col-md-6 mb-4">
+                        <div class="card article-card">
+                            <a href="#">
+                                <img src="https://via.placeholder.com/400x250/F8F9FA/C81C1C?text=Kejuaraan+Silat" class="card-img-top" alt="Gambar Artikel 1">
+                                <div class="card-body">
+                                    <h5 class="card-title">Kejuaraan Pencak Silat Tingkat Nasional Disambut Antusias</h5>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card article-card">
+                            <a href="#">
+                                <img src="https://via.placeholder.com/400x250/F8F9FA/C81C1C?text=Festival+Seni" class="card-img-top" alt="Gambar Artikel 2">
+                                <div class="card-body">
+                                    <h5 class="card-title">Festival Seni Bela Diri Tampilkan Berbagai Aliran Pencak Silat</h5>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card article-card">
+                            <a href="#">
+                                <img src="https://via.placeholder.com/400x250/F8F9FA/C81C1C?text=Atlet+Muda" class="card-img-top" alt="Gambar Artikel 3">
+                                <div class="card-body">
+                                    <h5 class="card-title">Generasi Muda Bangga Menjadi Bagian dari Pencak Silat</h5>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card article-card">
+                            <a href="#">
+                                <img src="https://via.placeholder.com/400x250/F8F9FA/C81C1C?text=Pelestarian+Budaya" class="card-img-top" alt="Gambar Artikel 4">
+                                <div class="card-body">
+                                    <h5 class="card-title">Pentingnya Pelestarian Budaya Lokal di Era Globalisasi</h5>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <nav aria-label="Page navigation">
+                    <ul class="pagination" id="artikel-pilihan-pagination">
+                        <li class="page-item" data-page="prev">
+                            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                        </li>
+                        <li class="page-item active" data-page="1" aria-current="page"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item" data-page="2"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item" data-page="3"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item" data-page="4"><a class="page-link" href="#">4</a></li>
+                        <li class="page-item" data-page="5"><a class="page-link" href="#">5</a></li>
+                        <li class="page-item" data-page="next">
+                            <a class="page-link" href="#">Next</a>
+                        </li>
+                    </ul>
+                </nav>
+                
+            </div>
+
+            <div class="col-lg-4">
+                <div class="text-center">
+                    <h2 class="section-title">Berita Terbaru</h2>
+                </div>
+                <div class="sidebar-article d-flex align-items-center">
+                    <img src="https://via.placeholder.com/100x60/F8F9FA/C81C1C?text=1" alt="Gambar Berita Terbaru">
+                    <a href="#">Pembukaan Pusat Latihan KHARPI di Jakarta Selatan</a>
+                </div>
+                <div class="sidebar-article d-flex align-items-center">
+                    <img src="https://via.placeholder.com/100x60/F8F9FA/C81C1C?text=2" alt="Gambar Berita Terbaru">
+                    <a href="#">Pelatihan Wasit dan Juri Pencak Silat Berstandar Internasional</a>
+                </div>
+                <div class="sidebar-article d-flex align-items-center">
+                    <img src="https://via.placeholder.com/100x60/F8F9FA/C81C1C?text=3" alt="Gambar Berita Terbaru">
+                    <a href="#">Wawancara Eksklusif dengan Ketua Umum KHARPI</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="iconBox">
+        <a href="#" class="perIconBox wa"><i class="fab fa-whatsapp"></i></a>
+        <a href="#" class="perIconBox fb"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="perIconBox ig"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="perIconBox yt"><i class="fab fa-youtube"></i></a>
+    </div>
+
+    <footer class="footer mt-auto py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>Contact Us</h4>
+                    <p>kharpi.gor@gmail.com</p>
+                    <p>085778830331</p>
+                    <p>Jl.Cemara III ujung, Kp.Cikunir Bulak No.160, RT.04/RW.03/RW, Jaka Mulya</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Informasi</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Artikel</a></li>
+                        <li><a href="#">Galeri</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Kesatria</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4>Lokasi Kami</h4>
+                    <div class="embed-responsive embed-responsive-1by1">
+                        <iframe class="embed-responsive-item"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.1949091591225!2d106.97294687481604!3d-6.238800993739915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698dd7277cd9b1%3A0x76295244246e0055!2sPADEPOKAN%20KESATRIA.HARIMAU%20PUTIH%20IND.%2C%20Jl.%20Cemara%20III%2C%20Jaka%20Mulya%2C%20Bekasi%20City%2C%20West%20Java%2C%20Indonesia!5e0!3m2!1sen!2sid!4v1707750299074!5m2!1sen!2sid"
+                            width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+            <hr class="mt-4 mb-3" style="border-color: rgba(255, 255, 255, 0.3);">
+            <p class="text-center">© 2024 Berita Merah Putih. Dibuat dengan semangat Indonesia.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Logika untuk menggeser artikel saat pagination diklik
+        const scrollContainer = document.getElementById('artikel-pilihan-container');
+        const pagination = document.getElementById('artikel-pilihan-pagination');
+        const pageItems = pagination.querySelectorAll('.page-item');
+        const articleCards = scrollContainer.querySelectorAll('.col-md-6');
+
+        let currentPage = 1;
+
+        function updatePagination(newPage) {
+            pageItems.forEach(item => item.classList.remove('active'));
+            const newActiveItem = pagination.querySelector(`[data-page="${newPage}"]`);
+            if (newActiveItem) {
+                newActiveItem.classList.add('active');
+            }
+            
+            const prevBtn = pagination.querySelector('[data-page="prev"]');
+            const nextBtn = pagination.querySelector('[data-page="next"]');
+            
+            if (newPage === 1) {
+                prevBtn.classList.add('disabled');
+            } else {
+                prevBtn.classList.remove('disabled');
+            }
+
+            if (newPage * 2 >= articleCards.length) { // Menyesuaikan dengan 2 card per halaman
+                nextBtn.classList.add('disabled');
+            } else {
+                nextBtn.classList.remove('disabled');
+            }
+        }
+
+        pageItems.forEach(item => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault();
+                const pageType = item.getAttribute('data-page');
+
+                let targetPage = currentPage;
+                
+                if (pageType === 'prev') {
+                    targetPage = Math.max(1, currentPage - 1);
+                } else if (pageType === 'next') {
+                    targetPage = Math.min(Math.ceil(articleCards.length / 2), currentPage + 1);
+                } else {
+                    targetPage = parseInt(pageType);
+                }
+
+                if (targetPage !== currentPage) {
+                    const scrollDistance = scrollContainer.offsetWidth * (targetPage - 1);
+                    scrollContainer.scrollTo({
+                        left: scrollDistance,
+                        behavior: 'smooth'
+                    });
+                    currentPage = targetPage;
+                    updatePagination(currentPage);
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
